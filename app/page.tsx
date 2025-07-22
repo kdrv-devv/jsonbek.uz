@@ -176,7 +176,7 @@ export default function HomePage() {
                     size="sm"
                     className="w-full hover:bg-blue-50 bg-transparent"
                     onClick={() => {
-                      navigator.clipboard.writeText(`https://jsonxon.bekhruzbek.uz/api${endpoint.path}?style=${selectedStyle}`)
+                      navigator.clipboard.writeText(`https://jsonbek.uz/api${endpoint.path}?style=${selectedStyle}`)
                     }}
                   >
                     <Copy className="w-4 h-4 mr-2" />
