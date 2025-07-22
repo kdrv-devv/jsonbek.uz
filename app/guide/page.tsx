@@ -41,7 +41,7 @@ export default function GuidePage() {
                   <Code className="w-5 h-5" />
                   <span>Tezkor boshlash</span>
                 </CardTitle>
-                <CardDescription>UzbekJSON bilan ishlashni boshlash uchun quyidagi qadamlarni bajaring</CardDescription>
+                <CardDescription>Jsonbek bilan ishlashni boshlash uchun quyidagi qadamlarni bajaring</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div>
