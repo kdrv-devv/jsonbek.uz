@@ -46,12 +46,12 @@ export default function GuidePage() {
               <CardContent className="space-y-4">
                 <div>
                   <h4 className="font-semibold mb-2">1. API manzili</h4>
-                  <code className="bg-gray-100 px-3 py-1 rounded">https://uzbekjson.uz/api</code>
+                  <code className="bg-gray-100 px-3 py-1 rounded">https://jsonbek.uz/api</code>
                 </div>
                 <div>
                   <h4 className="font-semibold mb-2">2. Birinchi so'rov</h4>
                   <pre className="bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto">
-                    <code>{`fetch('https://uzbekjson.uz/api/posts')
+                    <code>{`fetch('https://jsonbek.uz/api/posts')
   .then(response => response.json())
   .then(json => console.log(json))`}</code>
                   </pre>
@@ -73,7 +73,7 @@ export default function GuidePage() {
                 { path: "/posts", desc: "Maqolalar", icon: "📝" },
                 { path: "/comments", desc: "Izohlar", icon: "💬" },
                 { path: "/albums", desc: "Albomlar", icon: "📸" },
-                { path: "/photos", desc: "Rasmlar", icon: "🖼️" },
+                { path: "/products", desc: "Maxsulotlar", icon: "🖼️" },
                 { path: "/todos", desc: "Vazifalar", icon: "✅" },
                 { path: "/users", desc: "Foydalanuvchilar", icon: "👤" },
               ].map((endpoint) => (
@@ -150,7 +150,7 @@ export default function GuidePage() {
                   <h4 className="font-semibold mb-2">JavaScript (Fetch API)</h4>
                   <pre className="bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto">
                     <code>{`// Komediya uslubida maqolalar olish
-fetch('https://uzbekjson.uz/api/posts?style=comedy')
+fetch('https://jsonbek.uz/api/posts?style=comedy')
   .then(response => response.json())
   .then(posts => {
     posts.forEach(post => {
@@ -166,7 +166,7 @@ fetch('https://uzbekjson.uz/api/posts?style=comedy')
                     <code>{`import requests
 
 # Drama uslubida foydalanuvchilar olish
-response = requests.get('https://uzbekjson.uz/api/users?style=drama')
+response = requests.get('https://jsonbek.uz/api/users?style=drama')
 users = response.json()
 
 for user in users:
@@ -183,7 +183,7 @@ function UzbekPosts({ style = 'comedy' }) {
   const [posts, setPosts] = useState([]);
   
   useEffect(() => {
-    fetch(\`https://uzbekjson.uz/api/posts?style=\${style}\`)
+    fetch(\`https://jsonbek.uz/api/posts?style=\${style}\`)
       .then(res => res.json())
       .then(setPosts);
   }, [style]);

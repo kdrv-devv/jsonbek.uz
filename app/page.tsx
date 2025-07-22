@@ -203,7 +203,7 @@ export default function HomePage() {
               <Card>
                 <CardContent className="p-6">
                   <pre className="bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto">
-                    <code>{`fetch('https://jsonxon.bekhruzbek.uz/api/posts?style=${selectedStyle}')
+                    <code>{`fetch('https://jsonbek.uz/api/posts?style=${selectedStyle}')
   .then(response => response.json())
   .then(json => console.log(json))`}</code>
                   </pre>
@@ -215,7 +215,7 @@ export default function HomePage() {
               <Card>
                 <CardContent className="p-6">
                   <pre className="bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto">
-                    <code>{`axios.get('https://jsonxon.bekhruzbek.uz/api/posts?style=${selectedStyle}')
+                    <code>{`axios.get('https://jsonbek.uz/api/posts?style=${selectedStyle}')
   .then(response => {
     console.log(response.data);
   });`}</code>
@@ -228,7 +228,7 @@ export default function HomePage() {
               <Card>
                 <CardContent className="p-6">
                   <pre className="bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto">
-                    <code>{`curl -X GET "https://jsonxon.bekhruzbek.uz/api/posts?style=${selectedStyle}" \\
+                    <code>{`curl -X GET "https://jsonbek.uz/api/posts?style=${selectedStyle}" \\
      -H "Accept: application/json"`}</code>
                   </pre>
                 </CardContent>
@@ -272,10 +272,10 @@ export default function HomePage() {
             <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-amber-500 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-sm">JB</span>
             </div>
-            <h3 className="text-xl font-bold">UzbekJSON</h3>
+            <h3 className="text-xl font-bold">Jsonbek</h3>
           </div>
           <p className="text-gray-400 mb-4">O'zbek dasturchilar uchun yaratilgan bepul JSON API xizmati</p>
-          <p className="text-sm text-gray-500">© 2024 UzbekJSON. Barcha huquqlar himoyalangan.</p>
+          <p className="text-sm text-gray-500">© 2024 Jsonbek. Barcha huquqlar himoyalangan.</p>
         </div>
       </footer>
     </div>
