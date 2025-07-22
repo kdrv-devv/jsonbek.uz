@@ -46,10 +46,10 @@ export default function HomePage() {
   ]
 
   const endpoints = [
-    { path: "/posts", description: "Maqolalar", count: "100 ta" },
-    { path: "/comments", description: "Izohlar", count: "500 ta" },
+    { path: "/posts", description: "Maqolalar", count: "80 ta" },
+    { path: "/comments", description: "Izohlar", count: "80 ta" },
     { path: "/albums", description: "Albomlar", count: "100 ta" },
-    { path: "/photos", description: "Rasmlar", count: "5000 ta" },
+    { path: "/products", description: "Maxsulotlar", count: "80 ta" },
     { path: "/todos", description: "Vazifalar", count: "200 ta" },
     { path: "/users", description: "Foydalanuvchilar", count: "10 ta" },
   ]
@@ -167,7 +167,7 @@ export default function HomePage() {
                     </Badge>
                   </div>
                   <CardDescription className="font-mono text-blue-600">
-                    /api{endpoint.path}?style={selectedStyle}
+                    https://jsonbek.uz{endpoint.path}?style={selectedStyle}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>

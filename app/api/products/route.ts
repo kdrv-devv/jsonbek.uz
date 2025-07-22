@@ -10,7 +10,7 @@ const comedyProducts = [
     rate: 9,
     origin: "Qashqadaryo",
     available: true,
-    image:"/products-img/kalish.png"
+    image:"https://jsonbek.uz/products-img/kalish.png"
   },
   {
     id: 2,
@@ -20,6 +20,7 @@ const comedyProducts = [
     rate: 8.5,
     origin: "Andijon",
     available: true,
+    image:"https://jsonbek.uz/products-img/chopon.png"
   },
   {
     id: 3,
@@ -29,6 +30,7 @@ const comedyProducts = [
     rate: 8,
     origin: "Surxondaryo",
     available: false,
+    image:"https://jsonbek.uz/products-img/chilopchin.png"
   },
   {
     id: 4,
@@ -38,6 +40,7 @@ const comedyProducts = [
     rate: 9.2,
     origin: "Namangan",
     available: true,
+    image:"https://jsonbek.uz/products-img/belbog.png"
   },
   {
     id: 5,
@@ -47,6 +50,7 @@ const comedyProducts = [
     rate: 8.7,
     origin: "Buxoro",
     available: true,
+    image:"https://jsonbek.uz/products-img/doppi.png"
   },
   {
     id: 6,
@@ -56,6 +60,8 @@ const comedyProducts = [
     rate: 9.5,
     origin: "Xorazm",
     available: true,
+    image:"https://jsonbek.uz/products-img/patir.png",
+    
   },
   {
     id: 7,
@@ -65,6 +71,8 @@ const comedyProducts = [
     rate: 9,
     origin: "Samarqand",
     available: true,
+    image:"https://jsonbek.uz/products-img/choynak.png"
+
   },
   {
     id: 8,
@@ -74,6 +82,8 @@ const comedyProducts = [
     rate: 9.3,
     origin: "Farg‘ona",
     available: true,
+    image:"https://jsonbek.uz/products-img/kosov.png"
+
   },
   {
     id: 9,
@@ -83,6 +93,8 @@ const comedyProducts = [
     rate: 9.8,
     origin: "Qo‘qon",
     available: true,
+    image:"https://jsonbek.uz/products-img/kokchoy.png"
+
   },
   {
     id: 10,
@@ -92,6 +104,8 @@ const comedyProducts = [
     rate: 10,
     origin: "Har bir o‘zbek uyi",
     available: false,
+    image:"https://jsonbek.uz/products-img/savat.png"
+
   },
 ];
 
@@ -104,6 +118,7 @@ const dramaProducts = [
     rate: 8.3,
     origin: "Tog‘ yonbag‘irlari",
     available: true,
+    image:"https://jsonbek.uz/products-img/tosh.png"
   },
   {
     id: 2,
@@ -114,6 +129,8 @@ const dramaProducts = [
     rate: 9.1,
     origin: "Andijon",
     available: true,
+    image:"https://jsonbek.uz/products-img/daftarcha.png"
+
   },
   {
     id: 3,
@@ -123,6 +140,8 @@ const dramaProducts = [
     rate: 8.9,
     origin: "Buxoro",
     available: true,
+    image:"https://jsonbek.uz/products-img/sham.png"
+
   },
   {
     id: 4,
@@ -132,6 +151,8 @@ const dramaProducts = [
     rate: 9.5,
     origin: "Namangan",
     available: false,
+    image:"https://jsonbek.uz/products-img/maktub.png"
+
   },
   {
     id: 5,
@@ -141,6 +162,8 @@ const dramaProducts = [
     rate: 9.8,
     origin: "Farg‘ona",
     available: true,
+    image:"https://jsonbek.uz/products-img/kozyoshidishi.png"
+
   },
   {
     id: 6,
@@ -150,6 +173,8 @@ const dramaProducts = [
     rate: 8.6,
     origin: "Samarqand",
     available: true,
+    image:"https://jsonbek.uz/products-img/radio.png"
+
   },
   {
     id: 7,
@@ -159,6 +184,8 @@ const dramaProducts = [
     rate: 10,
     origin: "Har bir mehrobon uy",
     available: false,
+    image:"https://jsonbek.uz/products-img/stul.png"
+
   },
   {
     id: 8,
@@ -168,6 +195,8 @@ const dramaProducts = [
     rate: 8.4,
     origin: "Qorako‘l",
     available: false,
+    image:"https://jsonbek.uz/products-img/sochtolasi.png"
+
   },
   {
     id: 9,
@@ -177,6 +206,8 @@ const dramaProducts = [
     rate: 9.7,
     origin: "Xiva",
     available: true,
+    image:"https://jsonbek.uz/products-img/qutirasm.png"
+
   },
   {
     id: 10,
@@ -186,6 +217,8 @@ const dramaProducts = [
     rate: 9.9,
     origin: "Qashqadaryo",
     available: true,
+    image:"https://jsonbek.uz/products-img/yarimnon.png"
+
   },
 ];
 
@@ -199,6 +232,8 @@ const romanceProducts = [
     rate: 9.6,
     origin: "Marg‘ilon",
     available: true,
+    image:"https://jsonbek.uz/products-img/shoyikoylak.png"
+
   },
   {
     id: 2,
@@ -209,6 +244,8 @@ const romanceProducts = [
     rate: 9.4,
     origin: "Xiva",
     available: true,
+    image:"https://jsonbek.uz/products-img/lovepatir.png"
+
   },
   {
     id: 3,
@@ -219,6 +256,8 @@ const romanceProducts = [
     rate: 8.9,
     origin: "Buxoro",
     available: true,
+    image:"https://jsonbek.uz/products-img/doppi.png"
+
   },
   {
     id: 4,
@@ -229,6 +268,8 @@ const romanceProducts = [
     rate: 9.7,
     origin: "Samarqand",
     available: true,
+    image:"https://jsonbek.uz/products-img/choynak.png"
+
   },
   {
     id: 5,
@@ -239,6 +280,8 @@ const romanceProducts = [
     rate: 9.2,
     origin: "Qarshi",
     available: true,
+    image:"https://jsonbek.uz/products-img/kalish.png"
+
   },
   {
     id: 6,
@@ -249,6 +292,8 @@ const romanceProducts = [
     rate: 9.5,
     origin: "Namangan",
     available: true,
+    image:"https://jsonbek.uz/products-img/belbog.png"
+
   },
   {
     id: 7,
@@ -259,6 +304,8 @@ const romanceProducts = [
     rate: 9.1,
     origin: "Farg‘ona",
     available: true,
+    image:"https://jsonbek.uz/products-img/kosov.png"
+
   },
   {
     id: 8,
@@ -269,6 +316,8 @@ const romanceProducts = [
     rate: 8.8,
     origin: "Termiz",
     available: false,
+    image:"https://jsonbek.uz/products-img/chilopchin.png"
+
   },
   {
     id: 9,
@@ -279,6 +328,8 @@ const romanceProducts = [
     rate: 9.9,
     origin: "Qo‘qon",
     available: true,
+    image:"https://jsonbek.uz/products-img/kokchoy.png"
+
   },
   {
     id: 10,
@@ -289,6 +340,8 @@ const romanceProducts = [
     rate: 10,
     origin: "O‘zbek uylarining muhabbat burchagi",
     available: false,
+    image:"https://jsonbek.uz/products-img/savat.png"
+
   },
 ];
 
@@ -302,6 +355,8 @@ const adventureProducts = [
     rate: 8.9,
     origin: "Qizilqum",
     available: true,
+    image:"https://jsonbek.uz/products-img/kalish.png"
+
   },
   {
     id: 2,
@@ -312,6 +367,8 @@ const adventureProducts = [
     rate: 9.4,
     origin: "Pamir tog‘ etaklari",
     available: true,
+    image:"https://jsonbek.uz/products-img/chopon.png"
+
   },
   {
     id: 3,
@@ -322,6 +379,8 @@ const adventureProducts = [
     rate: 8.7,
     origin: "Zarafshon vodiysi",
     available: true,
+    image:"https://jsonbek.uz/products-img/chilopchin.png"
+
   },
   {
     id: 4,
@@ -332,6 +391,8 @@ const adventureProducts = [
     rate: 9.1,
     origin: "Jizzax",
     available: true,
+    image:"https://jsonbek.uz/products-img/belbog.png"
+
   },
   {
     id: 5,
@@ -342,6 +403,8 @@ const adventureProducts = [
     rate: 9.2,
     origin: "Chimyon",
     available: true,
+    image:"https://jsonbek.uz/products-img/doppi.png"
+
   },
   {
     id: 6,
@@ -352,6 +415,8 @@ const adventureProducts = [
     rate: 8.8,
     origin: "Navoiy",
     available: true,
+    image:"https://jsonbek.uz/products-img/patir.png"
+
   },
   {
     id: 7,
@@ -362,6 +427,8 @@ const adventureProducts = [
     rate: 9.3,
     origin: "Nurata",
     available: true,
+    image:"https://jsonbek.uz/products-img/choynak.png"
+
   },
   {
     id: 8,
@@ -372,6 +439,8 @@ const adventureProducts = [
     rate: 9,
     origin: "Hisor tizmasi",
     available: true,
+    image:"https://jsonbek.uz/products-img/kosov.png"
+
   },
   {
     id: 9,
@@ -382,6 +451,8 @@ const adventureProducts = [
     rate: 9.6,
     origin: "Boysun",
     available: true,
+    image:"https://jsonbek.uz/products-img/kokchoy.png"
+
   },
   {
     id: 10,
@@ -392,8 +463,12 @@ const adventureProducts = [
     rate: 10,
     origin: "Har bir boboning ombori",
     available: false,
+    image:"https://jsonbek.uz/products-img/sayohatxaltasi.png"
+
   },
 ];
+
+
 
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
