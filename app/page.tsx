@@ -275,7 +275,7 @@ export default function HomePage() {
             <h3 className="text-xl font-bold">Jsonbek</h3>
           </div>
           <p className="text-gray-400 mb-4">O'zbek dasturchilar uchun yaratilgan bepul JSON API xizmati</p>
-          <p className="text-sm text-gray-500">© 2024 Jsonbek. Barcha huquqlar himoyalangan.</p>
+          <p className="text-sm text-gray-500">© 2025 Jsonbek. Barcha huquqlar himoyalangan.</p>
         </div>
       </footer>
     </div>
