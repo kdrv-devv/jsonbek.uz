@@ -167,7 +167,7 @@ export default function HomePage() {
                     </Badge>
                   </div>
                   <CardDescription className="font-mono text-blue-600">
-                    https://jsonbek.uz{endpoint.path}?style={selectedStyle}
+                    https://jsonbek.uz/api{endpoint.path}?style={selectedStyle}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
