@@ -200,11 +200,11 @@ export async function GET(request: NextRequest) {
   }
 
   // Simulate pagination
-  const startIndex = (page - 1) * limit;
-  const endIndex = startIndex + limit;
-  const paginatedPosts = albums.slice(startIndex, endIndex);
+  // const startIndex = (page - 1) * limit;
+  // const endIndex = startIndex + limit;
+  // const paginatedPosts = albums.slice(startIndex, endIndex);
 
-  return NextResponse.json(paginatedPosts);
+  return NextResponse.json(albums);
 }
 
 
