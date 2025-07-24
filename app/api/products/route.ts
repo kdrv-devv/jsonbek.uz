@@ -469,7 +469,6 @@ const adventureProducts = [
 ];
 
 
-
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
   const style = searchParams.get("style") || "comedy";
@@ -492,13 +491,31 @@ export async function GET(request: NextRequest) {
     default:
       products = comedyProducts;
   }
+
+  let data;
+  let status = 200;
+
   if (id) {
     const product = products.find((pr) => pr.id === Number.parseInt(id));
-    if(!product){
-        return NextResponse.json({error:"Maxsulot topilmadi"} , { status:404})
+    if (!product) {
+      data = { error: "Maxsulot topilmadi" };
+      status = 404;
+    } else {
+      data = product;
     }
-    return NextResponse.json(product || null);
+  } else {
+    data = products;
   }
-  return NextResponse.json(products);
-}
 
+  const response = new NextResponse(JSON.stringify(data), {
+    status,
+    headers: {
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type, Authorization",
+    },
+  });
+
+  return response;
+}

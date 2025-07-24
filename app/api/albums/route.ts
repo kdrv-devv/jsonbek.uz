@@ -1,3 +1,4 @@
+import { log } from "console";
 import { type NextRequest, NextResponse } from "next/server";
 
 const comedyAlbums = [
@@ -173,13 +174,14 @@ const adventureAlbums = [
 ];
 
 
+
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
   const style = searchParams.get("style") || "comedy";
   const limit = Number.parseInt(searchParams.get("_limit") || "10");
   const page = Number.parseInt(searchParams.get("_page") || "1");
 
-  let albums;
+  let albums:any;
   switch (style) {
     case "drama":
       albums = dramaAlbums;
@@ -204,3 +206,7 @@ export async function GET(request: NextRequest) {
 
   return NextResponse.json(paginatedPosts);
 }
+
+
+
+
