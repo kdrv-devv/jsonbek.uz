@@ -1,29 +1,34 @@
-"use client"
-import { ArrowLeft } from "lucide-react"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Code } from "lucide-react"
-import Link from "next/link"
+"use client";
+import { ArrowLeft } from "lucide-react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Code } from "lucide-react";
+import Link from "next/link";
 
 export default function GuidePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-amber-50">
       <div className="container mx-auto px-4 py-12">
-
-          <Link href={"/"}>
-            <button className="fixed h-8 flex items-center justify-center gap-1 p-2 bg-[#80808024] text-[#786C81] rounded-lg top-4 left-5">
-          <ArrowLeft className=""/>
-           Home 
-        </button>
-          </Link>
+        <Link href={"/"}>
+          <button className="fixed h-8 flex items-center justify-center gap-1 p-2 bg-[#80808024] text-[#786C81] rounded-lg top-4 left-5">
+            <ArrowLeft className="" />
+            Home
+          </button>
+        </Link>
 
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-amber-600 bg-clip-text text-transparent mb-4">
-            UzbekJSON Qo'llanma
+            Jsonbek Qo'llanma
           </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            UzbekJSON API xizmatidan qanday foydalanishni o'rganing
-          </p>
+          <h2 className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Jsonbek API xizmatidan qanday foydalanishni o'rganing
+          </h2>
         </div>
 
         <Tabs defaultValue="getting-started" className="max-w-4xl mx-auto">
@@ -41,12 +46,17 @@ export default function GuidePage() {
                   <Code className="w-5 h-5" />
                   <span>Tezkor boshlash</span>
                 </CardTitle>
-                <CardDescription>Jsonbek bilan ishlashni boshlash uchun quyidagi qadamlarni bajaring</CardDescription>
+                <CardDescription>
+                  Jsonbek bilan ishlashni boshlash uchun quyidagi qadamlarni
+                  bajaring
+                </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div>
                   <h4 className="font-semibold mb-2">1. API manzili</h4>
-                  <code className="bg-gray-100 px-3 py-1 rounded">https://jsonbek.uz/api</code>
+                  <code className="bg-gray-100 px-3 py-1 rounded">
+                    https://jsonbek.uz/api
+                  </code>
                 </div>
                 <div>
                   <h4 className="font-semibold mb-2">2. Birinchi so'rov</h4>
@@ -59,9 +69,12 @@ export default function GuidePage() {
                 <div>
                   <h4 className="font-semibold mb-2">3. Uslub tanlash</h4>
                   <p className="text-gray-600 mb-2">
-                    Ma'lumot uslubini tanlash uchun <code>style</code> parametridan foydalaning:
+                    Ma'lumot uslubini tanlash uchun <code>style</code>{" "}
+                    parametridan foydalaning:
                   </p>
-                  <code className="bg-gray-100 px-3 py-1 rounded">?style=comedy</code>
+                  <code className="bg-gray-100 px-3 py-1 rounded">
+                    ?style=comedy
+                  </code>
                 </div>
               </CardContent>
             </Card>
@@ -83,11 +96,14 @@ export default function GuidePage() {
                       <span className="text-2xl">{endpoint.icon}</span>
                       <span>{endpoint.desc}</span>
                     </CardTitle>
-                    <CardDescription className="font-mono">/api{endpoint.path}</CardDescription>
+                    <CardDescription className="font-mono">
+                      /api{endpoint.path}
+                    </CardDescription>
                   </CardHeader>
                   <CardContent>
                     <p className="text-sm text-gray-600">
-                      {endpoint.desc} ma'lumotlarini olish uchun ushbu yo'nalishdan foydalaning.
+                      {endpoint.desc} ma'lumotlarini olish uchun ushbu
+                      yo'nalishdan foydalaning.
                     </p>
                   </CardContent>
                 </Card>
@@ -126,7 +142,9 @@ export default function GuidePage() {
                 <Card key={style.id}>
                   <CardHeader>
                     <CardTitle className="flex items-center space-x-2">
-                      <div className={`w-4 h-4 rounded-full ${style.color}`}></div>
+                      <div
+                        className={`w-4 h-4 rounded-full ${style.color}`}
+                      ></div>
                       <span>{style.name}</span>
                     </CardTitle>
                     <CardDescription>?style={style.id}</CardDescription>
@@ -143,7 +161,10 @@ export default function GuidePage() {
             <Card>
               <CardHeader>
                 <CardTitle>Amaliy misollar</CardTitle>
-                <CardDescription>Turli dasturlash tillari va kutubxonalar bilan foydalanish misollari</CardDescription>
+                <CardDescription>
+                  Turli dasturlash tillari va kutubxonalar bilan foydalanish
+                  misollari
+                </CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div>
@@ -207,5 +228,5 @@ function UzbekPosts({ style = 'comedy' }) {
         </Tabs>
       </div>
     </div>
-  )
+  );
 }
