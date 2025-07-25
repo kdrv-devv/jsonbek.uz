@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="uz">
        <head>
-        <link rel="icon" href="../public/favicon.png" />
+        <link rel="icon" href="/favicon.png" />
       </head>
       <body>{children}</body>
     </html>
