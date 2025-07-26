@@ -4,7 +4,7 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'Jsonbek Placeholder',
   keywords: ['json', 'placeholder', 'uzbek', 'jsonbek','fake api' , 'fake beckend' , 'free beckend'],
-  authors: [{ name: 'Uzbekify', url: 'https://uzbekify.com' }],
+  authors: [{ name: 'Behruzbek', url: 'https://t.me/richard_9757' } , { name:"Sarvarbek" , url:"https://t.me/sarvarbek_qodirovv"}],
   creator: 'Uzbekify',
   description: 'Frontend dasturchilar uchun sun\'iy beckend.',
 }
