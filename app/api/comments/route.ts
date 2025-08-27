@@ -575,30 +575,57 @@ const adventureComments = [
 
 
 export async function GET(request: NextRequest) {
-  const { searchParams } = new URL(request.url)
-  const style = searchParams.get("style") || "comedy"
-  const postId = searchParams.get("postId")
+  const { searchParams } = new URL(request.url);
+  const style = searchParams.get("style") || "comedy";
+  const postId = searchParams.get("postId");
 
-  let comments
+  let comments;
   switch (style) {
     case "drama":
-      comments = dramaComments
-      break
+      comments = dramaComments;
+      break;
     case "romance":
-      comments = romanceComments
+      comments = romanceComments;
+      break;
     case "adventure":
-      comments = adventureComments
+      comments = adventureComments;
+      break;
     case "comedy":
-      comments = comedyComments
-      break
+      comments = comedyComments;
+      break;
     default:
-      comments = comedyComments
+      comments = comedyComments;
   }
 
   if (postId) {
-    const filteredComments = comments.filter((c) => c.postId === Number.parseInt(postId))
-    return NextResponse.json(filteredComments)
+    const filteredComments = comments.filter(
+      (c) => c.postId === Number.parseInt(postId)
+    );
+    return NextResponse.json(filteredComments, {
+      headers: {
+        "Access-Control-Allow-Origin": "*", // hammaga ochiq
+        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+        "Access-Control-Allow-Headers": "Content-Type, Authorization",
+      },
+    });
   }
 
-  return NextResponse.json(comments)
+  return NextResponse.json(comments, {
+    headers: {
+      "Access-Control-Allow-Origin": "*", // hammaga ochiq
+      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type, Authorization",
+    },
+  });
+}
+
+// OPTIONS request (preflight) uchun ham yozish kerak
+export async function OPTIONS() {
+  return NextResponse.json({}, {
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type, Authorization",
+    },
+  });
 }

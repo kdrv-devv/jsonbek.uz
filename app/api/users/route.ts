@@ -992,7 +992,6 @@ export async function GET(request: NextRequest) {
   const style = searchParams.get("style") || "comedy";
   const id = searchParams.get("id");
 
-  
   let users;
   switch (style) {
     case "comedy":
@@ -1001,7 +1000,6 @@ export async function GET(request: NextRequest) {
     case "drama":
       users = dramaUsers;
       break;
-
     case "romance":
       users = romanceUsers;
       break;
@@ -1014,8 +1012,31 @@ export async function GET(request: NextRequest) {
 
   if (id) {
     const user = users.find((u) => u.id === Number.parseInt(id));
-    return NextResponse.json(user || null);
+    return NextResponse.json(user || null, {
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+        "Access-Control-Allow-Headers": "Content-Type, Authorization",
+      },
+    });
   }
 
-  return NextResponse.json(users);
+  return NextResponse.json(users, {
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type, Authorization",
+    },
+  });
+}
+
+// OPTIONS (preflight) uchun ham yozamiz
+export async function OPTIONS() {
+  return NextResponse.json({}, {
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type, Authorization",
+    },
+  });
 }

@@ -812,6 +812,7 @@ const adventurePosts = [
   },
 ];
 
+
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
   const style = searchParams.get("style") || "comedy";
@@ -833,10 +834,26 @@ export async function GET(request: NextRequest) {
       posts = comedyPosts;
   }
 
-  // Simulate pagination
   const startIndex = (page - 1) * limit;
   const endIndex = startIndex + limit;
   const paginatedPosts = posts.slice(startIndex, endIndex);
 
-  return NextResponse.json(paginatedPosts);
+  return NextResponse.json(paginatedPosts, {
+    headers: {
+      "Access-Control-Allow-Origin": "*", // hammaga ochiq
+      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type, Authorization",
+    },
+  });
 }
+
+export async function OPTIONS() {
+  return NextResponse.json({}, {
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type, Authorization",
+    },
+  });
+}
+

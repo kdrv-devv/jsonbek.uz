@@ -312,12 +312,12 @@ const adventureTodos = [
   { userId: 10, id: 20, title: "Dushman lageriga bostirib kirish", completed: true }
 ];
 
+
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
   const style = searchParams.get("style") || "comedy";
   const id = searchParams.get("id");
 
-  
   let todos;
   switch (style) {
     case "comedy":
@@ -326,11 +326,9 @@ export async function GET(request: NextRequest) {
     case "drama":
       todos = dramaTodos;
       break;
-
     case "romance":
       todos = romanceTodos;
       break;
-
     case "adventure":
       todos = adventureTodos;
       break;
@@ -340,9 +338,31 @@ export async function GET(request: NextRequest) {
 
   if (id) {
     const user = todos.find((u) => u.id === Number.parseInt(id));
-    return NextResponse.json(user || null);
+    return NextResponse.json(user || null, {
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+        "Access-Control-Allow-Headers": "Content-Type, Authorization",
+      },
+    });
   }
 
-  
-  return NextResponse.json(todos);
+  return NextResponse.json(todos, {
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type, Authorization",
+    },
+  });
+}
+
+// OPTIONS request (preflight) uchun
+export async function OPTIONS() {
+  return NextResponse.json({}, {
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type, Authorization",
+    },
+  });
 }
