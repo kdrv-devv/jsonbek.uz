@@ -8,6 +8,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Copy, Star, Users, MessageCircle, Heart, Laugh, Drama } from "lucide-react"
 import Link from "next/link"
+import Features from "@/components/features"
 
 export default function HomePage() {
   const [selectedStyle, setSelectedStyle] = useState("comedy")
@@ -59,36 +60,15 @@ export default function HomePage() {
       {/* Animated Uzbek Pattern Background */}
       <div className="absolute inset-0 opacity-5">
         <div
-          className={`w-full h-full bg-repeat transition-transform duration-3000 ${
-            animatePattern ? "scale-105 rotate-1" : "scale-100 rotate-0"
-          }`}
+          className={`w-full h-full bg-no-repeat bg-center transition-transform duration-3000 ${animatePattern ? "scale-105 rotate-1" : "scale-100 rotate-0"
+            }`}
           style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fillRule='evenodd'%3E%3Cg fill='%23d4af37' fillOpacity='0.4'%3E%3Cpath d='M30 30c0-11.046-8.954-20-20-20s-20 8.954-20 20 8.954 20 20 20 20-8.954 20-20zm0 0c0 11.046 8.954 20 20 20s20-8.954 20-20-8.954-20-20-20-20 8.954-20 20z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+            backgroundImage: `url("./jsonbek-img.png")`,
           }}
         />
       </div>
 
-      {/* Header */}
-      <header className="relative z-10 border-b bg-white/80 backdrop-blur-sm">
-        <div className="container mx-auto px-4 py-4">
-          <nav className="flex items-center justify-between">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-amber-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">JB</span>
-              </div>
-              <h1 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-amber-600 bg-clip-text text-transparent">
-                Jsonbek
-              </h1>
-            </div>
-            <div className="flex items-center space-x-6">
-              <Link href="/guide" className="text-gray-600 hover:text-blue-600 transition-colors">
-                Qo'llanma
-              </Link>
-           
-            </div>
-          </nav>
-        </div>
-      </header>
+
 
       {/* Main Content */}
       <main className="relative z-10 container mx-auto px-4 py-12">
@@ -121,7 +101,7 @@ export default function HomePage() {
           </div>
 
           {/* Style Selector */}
-          <Card className="max-w-md mx-auto mb-8 border-2 border-amber-200 bg-gradient-to-r from-blue-50 to-amber-50">
+          <Card className="max-w-md mx-auto mb-8 border-2 border-green-400 bg-gradient-to-r from-blue-50 to-amber-50">
             <CardHeader className="pb-3">
               <CardTitle className="text-lg text-center">Ma'lumot uslubini tanlang</CardTitle>
             </CardHeader>
@@ -156,7 +136,7 @@ export default function HomePage() {
             {endpoints.map((endpoint, index) => (
               <Card
                 key={endpoint.path}
-                className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-l-4 border-l-blue-500 bg-gradient-to-br from-white to-blue-50"
+                className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-l-4 border-l-green-500 bg-gradient-to-br from-green-100 to-green-200"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <CardHeader className="pb-3">
@@ -174,7 +154,7 @@ export default function HomePage() {
                   <Button
                     variant="outline"
                     size="sm"
-                    className="w-full hover:bg-blue-50 bg-transparent"
+                    className="w-full border border-green-400 hover:bg-blue-50 bg-transparent"
                     onClick={() => {
                       navigator.clipboard.writeText(`https://jsonbek.uz/api${endpoint.path}?style=${selectedStyle}`)
                     }}
@@ -237,47 +217,11 @@ export default function HomePage() {
           </Tabs>
         </div>
 
-        {/* Features */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          <Card className="text-center p-6 bg-gradient-to-br from-blue-50 to-white border-2 border-blue-200">
-            <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-              <MessageCircle className="w-8 h-8 text-white" />
-            </div>
-            <h3 className="text-xl font-bold mb-2">O'zbek tilida</h3>
-            <p className="text-gray-600">Barcha ma'lumotlar o'zbek tilida va madaniyatiga mos</p>
-          </Card>
+            {/* Features */}
+            <Features/>
 
-          <Card className="text-center p-6 bg-gradient-to-br from-amber-50 to-white border-2 border-amber-200">
-            <div className="w-16 h-16 bg-amber-500 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Drama className="w-8 h-8 text-white" />
-            </div>
-            <h3 className="text-xl font-bold mb-2">Turli uslublar</h3>
-            <p className="text-gray-600">Komediya, drama, romantika va boshqa uslublarda ma'lumotlar</p>
-          </Card>
-
-          <Card className="text-center p-6 bg-gradient-to-br from-purple-50 to-white border-2 border-purple-200">
-            <div className="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Star className="w-8 h-8 text-white" />
-            </div>
-            <h3 className="text-xl font-bold mb-2">Bepul va tez</h3>
-            <p className="text-gray-600">Hech qanday ro'yxatdan o'tmasdan darhol foydalaning</p>
-          </Card>
-        </div>
       </main>
 
-      {/* Footer */}
-      <footer className="relative z-10 bg-gray-900 text-white py-12">
-        <div className="container mx-auto px-4 text-center">
-          <div className="flex items-center justify-center space-x-2 mb-4">
-            <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-amber-500 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">JB</span>
-            </div>
-            <h3 className="text-xl font-bold">Jsonbek</h3>
-          </div>
-          <p className="text-gray-400 mb-4">O'zbek dasturchilar uchun yaratilgan bepul JSON API xizmati</p>
-          <p className="text-sm text-gray-500">© 2025 Jsonbek. Barcha huquqlar himoyalangan.</p>
-        </div>
-      </footer>
     </div>
   )
 }
