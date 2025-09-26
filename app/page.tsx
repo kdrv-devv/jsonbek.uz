@@ -77,7 +77,7 @@ export default function HomePage() {
         <Toaster />
         {/* Hero Section */}
         <div className="text-center mb-16">
-          <div className="flex items-center  flex-col sm:flex-row space-x-2 mb-6">
+          <div className="flex items-center justify-center  flex-col sm:flex-row space-x-2 mb-6">
             <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-amber-500 rounded-xl flex items-center justify-center animate-pulse">
               <span className="text-white font-bold text-lg">JB</span>
             </div>
