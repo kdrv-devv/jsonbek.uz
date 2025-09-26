@@ -9,7 +9,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Copy, Star, Users, MessageCircle, Heart, Laugh, Drama } from "lucide-react"
 import Link from "next/link"
 import Features from "@/components/features"
-import  { useMyToast } from "@/components/toasts"
+import { useMyToast } from "@/components/toasts"
 
 export default function HomePage() {
   const [selectedStyle, setSelectedStyle] = useState("comedy")
@@ -72,14 +72,12 @@ export default function HomePage() {
         />
       </div>
 
-
-
       {/* Main Content */}
       <main className="relative z-10 container mx-auto px-4 py-12">
-        <Toaster/>
+        <Toaster />
         {/* Hero Section */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center space-x-2 mb-6">
+          <div className="flex items-center  flex-col sm:flex-row space-x-2 mb-6">
             <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-amber-500 rounded-xl flex items-center justify-center animate-pulse">
               <span className="text-white font-bold text-lg">JB</span>
             </div>
@@ -223,8 +221,8 @@ export default function HomePage() {
           </Tabs>
         </div>
 
-            {/* Features */}
-            <Features/>
+        {/* Features */}
+        <Features />
 
       </main>
 
