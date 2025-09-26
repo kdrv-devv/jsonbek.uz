@@ -1,5 +1,5 @@
 "use client"
-
+import { Toaster } from "@/components/ui/toaster"
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -9,6 +9,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Copy, Star, Users, MessageCircle, Heart, Laugh, Drama } from "lucide-react"
 import Link from "next/link"
 import Features from "@/components/features"
+import  { useMyToast } from "@/components/toasts"
 
 export default function HomePage() {
   const [selectedStyle, setSelectedStyle] = useState("comedy")
@@ -55,9 +56,12 @@ export default function HomePage() {
     { path: "/users", description: "Foydalanuvchilar", count: "10 ta" },
   ]
 
+  const showToast = useMyToast()
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-amber-50 relative overflow-hidden">
       {/* Animated Uzbek Pattern Background */}
+
       <div className="absolute inset-0 opacity-5">
         <div
           className={`w-full h-full bg-no-repeat bg-center transition-transform duration-3000 ${animatePattern ? "scale-105 rotate-1" : "scale-100 rotate-0"
@@ -72,6 +76,7 @@ export default function HomePage() {
 
       {/* Main Content */}
       <main className="relative z-10 container mx-auto px-4 py-12">
+        <Toaster/>
         {/* Hero Section */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 mb-6">
@@ -157,6 +162,7 @@ export default function HomePage() {
                     className="w-full border border-green-400 hover:bg-blue-50 bg-transparent"
                     onClick={() => {
                       navigator.clipboard.writeText(`https://jsonbek.uz/api${endpoint.path}?style=${selectedStyle}`)
+                      showToast(`${endpoint.description.toUpperCase()} endpointi nusxalandi `)
                     }}
                   >
                     <Copy className="w-4 h-4 mr-2" />
