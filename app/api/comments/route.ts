@@ -1,6 +1,6 @@
 import { type NextRequest, NextResponse } from "next/server"
 
-const comedyComments = [
+export const comedyComments = [
   {
     id: 1,
     postId: 1,
@@ -143,7 +143,7 @@ const comedyComments = [
   },
 ];
 
-const dramaComments = [
+export const dramaComments = [
   {
     id: 1,
     postId: 1,
@@ -286,7 +286,7 @@ const dramaComments = [
   }
 ];
 
-const romanceComments = [
+export const romanceComments = [
   {
     id: 1,
     postId: 1,
@@ -429,7 +429,7 @@ const romanceComments = [
   },
 ]
 
-const adventureComments = [
+export const adventureComments = [
   {
     id: 1,
     postId: 1,

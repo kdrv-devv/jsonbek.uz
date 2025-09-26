@@ -1,5 +1,10 @@
 import { type NextRequest, NextResponse } from "next/server";
-import { adventureUsers, comedyUsers, dramaUsers, romanceUsers } from "../route";
+import {
+  adventureAlbums,
+  comedyAlbums,
+  dramaAlbums,
+  romanceAlbums,
+} from "../route";
 import { inArray } from "@/helpers";
 
 export async function GET(
@@ -13,19 +18,19 @@ export async function GET(
   let product = null;
   switch (style) {
     case "drama":
-      product = inArray(id, dramaUsers);
+      product = inArray(id, dramaAlbums);
       break;
     case "comedy":
-      product = inArray(id, comedyUsers);
+      product = inArray(id, comedyAlbums);
       break;
     case "romance":
-      product = inArray(id, romanceUsers);
+      product = inArray(id, romanceAlbums);
       break;
     case "adventure":
-      product = inArray(id, adventureUsers);
+      product = inArray(id, adventureAlbums);
       break;
     default:
-      product = inArray(id, comedyUsers);
+      product = inArray(id, comedyAlbums);
   }
     let status = 200
 

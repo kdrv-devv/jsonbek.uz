@@ -1,6 +1,6 @@
 import { type NextRequest, NextResponse } from "next/server";
 
-const comedyProducts = [
+export const comedyProducts = [
   {
     id: 1,
     title: "Kalish",
@@ -104,7 +104,7 @@ const comedyProducts = [
   },
 ];
 
-const dramaProducts = [
+export const dramaProducts = [
   {
     id: 1,
     title: "Tog‘ toshi",
@@ -208,7 +208,7 @@ const dramaProducts = [
   },
 ];
 
-const romanceProducts = [
+export const romanceProducts = [
   {
     id: 1,
     title: "Sevgi Shoyi Ko‘ylak",
@@ -321,7 +321,7 @@ const romanceProducts = [
   },
 ];
 
-const adventureProducts = [
+export const adventureProducts = [
   {
     id: 1,
     title: "Cho‘lboz Kalish",
@@ -437,7 +437,6 @@ const adventureProducts = [
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
   const style = searchParams.get("style") || "comedy";
-  const id = searchParams.get("id");
 
   let products;
   switch (style) {
@@ -460,17 +459,6 @@ export async function GET(request: NextRequest) {
   let data;
   let status = 200;
 
-  if (id) {
-    const product = products.find((pr) => pr.id === Number.parseInt(id));
-    if (!product) {
-      data = { error: "Maxsulot topilmadi" };
-      status = 404;
-    } else {
-      data = product;
-    }
-  } else {
-    data = products;
-  }
 
   const response = new NextResponse(JSON.stringify(data), {
     status,

@@ -1,6 +1,6 @@
 import { type NextRequest, NextResponse } from "next/server";
 
-const comedyAlbums = [
+export const comedyAlbums = [
   { userId: 1, id: 1, title: "Qozon tagida tuxum" },
   { userId: 1, id: 2, title: "Eshikni yop, qush kirib ketdi" },
   { userId: 1, id: 3, title: "Moshinani yuvdim, yomg‘ir yog‘di" },
@@ -23,7 +23,7 @@ const comedyAlbums = [
   { userId: 1, id: 20, title: "Shamollatkichdagi muhabbat" },
 ];
 
-const dramaAlbums = [
+export const dramaAlbums = [
   { userId: 1, id: 1, title: "Yarimta xat" },
   { userId: 1, id: 2, title: "Ko‘z yoshlari ortidagi haqiqat" },
   { userId: 1, id: 3, title: "Kechikkan kechirim" },
@@ -46,7 +46,7 @@ const dramaAlbums = [
   { userId: 1, id: 20, title: "Shamollatkichdagi muhabbat" },
 ];
 
-const romanceAlbums = [
+export const romanceAlbums = [
   { userId: 1, id: 1, title: "Muhabbat iztirobi" },
   { userId: 1, id: 2, title: "Ko‘zlar jozibasi" },
   { userId: 1, id: 3, title: "Yurakdagi izlar" },
@@ -69,7 +69,7 @@ const romanceAlbums = [
   { userId: 1, id: 20, title: "Oshiqlar qo‘shig‘i" },
 ];
 
-const adventureAlbums = [
+export const adventureAlbums = [
   { userId: 1, id: 1, title: "Sahro sirlari" },
   { userId: 1, id: 2, title: "Tog‘lar ortidagi izlanish" },
   { userId: 1, id: 3, title: "Yo‘qolgan xazina" },
@@ -96,8 +96,7 @@ const adventureAlbums = [
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
   const style = searchParams.get("style") || "comedy";
-  const limit = Number.parseInt(searchParams.get("_limit") || "10");
-  const page = Number.parseInt(searchParams.get("_page") || "1");
+
 
   let albums: any;
   switch (style) {

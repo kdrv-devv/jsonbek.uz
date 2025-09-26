@@ -1,6 +1,6 @@
 import { type NextRequest, NextResponse } from "next/server";
 
-const comedyUsers = [
+export const comedyUsers = [
   {
     id: 1,
     name: "Komil Karimov",
@@ -247,7 +247,7 @@ const comedyUsers = [
   },
 ];
 
-const dramaUsers = [
+export const dramaUsers = [
   {
     id: 1,
     name: "Sardor Rahimov",
@@ -490,7 +490,7 @@ const dramaUsers = [
   },
 ];
 
-const romanceUsers = [
+export const romanceUsers = [
   {
     id: 1,
     name: "Lola Rustamova",
@@ -743,7 +743,7 @@ const romanceUsers = [
   },
 ];
 
-const adventureUsers = [
+export const adventureUsers = [
   {
     id: 1,
     name: "Shahzod Nurmatov",

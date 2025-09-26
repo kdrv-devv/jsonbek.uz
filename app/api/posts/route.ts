@@ -1,6 +1,6 @@
 import { type NextRequest, NextResponse } from "next/server";
 
-const comedyPosts = [
+export const comedyPosts = [
   {
     id: 1,
     title: "Mening mushukimning kundalik hayoti",
@@ -203,7 +203,7 @@ const comedyPosts = [
   },
 ];
 
-const dramaPosts = [
+export const dramaPosts = [
   {
     id: 1,
     title: "Vaqt o'tishi haqida o'ylar",
@@ -406,7 +406,7 @@ const dramaPosts = [
   },
 ];
 
-const romancePosts = [
+export const romancePosts = [
   {
     id: 1,
     title: "Bahor sevgisi",
@@ -609,7 +609,7 @@ const romancePosts = [
   },
 ];
 
-const adventurePosts = [
+export const adventurePosts = [
   {
     id: 1,
     title: "Chimyon tog'laridagi sarguzasht",

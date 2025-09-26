@@ -1,6 +1,6 @@
 import { type NextRequest, NextResponse } from "next/server";
 
-const comedyTodos = [
+export const comedyTodos = [
   { userId: 1, id: 1, title: "Choynakni gazdan olish", completed: false },
   { userId: 1, id: 2, title: "Qoshnining mushugiga ovqat berish", completed: true },
   { userId: 1, id: 3, title: "Internet tugagani uchun derazadan signal tutish", completed: false },
@@ -23,7 +23,7 @@ const comedyTodos = [
   { userId: 1, id: 20, title: "Uy yumushlarini rejalashtirish, lekin bajarmaslik", completed: true },
 ];
 
-const dramaTodos = [
+export const dramaTodos = [
   {
     id: 1,
     name: "Sardor Rahimov",
@@ -266,7 +266,7 @@ const dramaTodos = [
   },
 ];
 
-const romanceTodos = [
+export const romanceTodos = [
   { userId: 1, id: 1, title: "Sevgilimga maktub yozish", completed: false },
   { userId: 1, id: 2, title: "Gullar do‘koniga borish", completed: true },
   { userId: 1, id: 3, title: "Tungi yurish rejalashtirish", completed: false },
@@ -289,7 +289,7 @@ const romanceTodos = [
   { userId: 10, id: 20, title: "O‘tmish suratlarni ko‘rib kulish", completed: true }
 ];
 
-const adventureTodos = [
+export const adventureTodos = [
   { userId: 1, id: 1, title: "Cho‘l bo‘ylab yakka yurish", completed: false },
   { userId: 1, id: 2, title: "G'or ichida xazina qidirish", completed: true },
   { userId: 2, id: 3, title: "Toqqa chiqish musobaqasi", completed: false },
