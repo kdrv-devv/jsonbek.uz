@@ -434,6 +434,7 @@ export const adventureProducts = [
   },
 ];
 
+
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
   const style = searchParams.get("style") || "comedy";

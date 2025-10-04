@@ -115,12 +115,7 @@ export async function GET(request: NextRequest) {
     default:
       albums = comedyAlbums;
   }
-
-  // pagination ishlatmoqchi bo‘lsangiz
-  // const startIndex = (page - 1) * limit;
-  // const endIndex = startIndex + limit;
-  // const paginatedAlbums = albums.slice(startIndex, endIndex);
-
+  
   return NextResponse.json(albums, {
     headers: {
       "Access-Control-Allow-Origin": "*", // Hamma domenlarga ruxsat
