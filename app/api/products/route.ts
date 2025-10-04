@@ -457,11 +457,10 @@ export async function GET(request: NextRequest) {
       products = comedyProducts;
   }
 
-  let data;
   let status = 200;
 
 
-  const response = new NextResponse(JSON.stringify(data), {
+  const response = new NextResponse(JSON.stringify(products), {
     status,
     headers: {
       "Content-Type": "application/json",
