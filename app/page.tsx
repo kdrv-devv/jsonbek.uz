@@ -55,6 +55,7 @@ export default function HomePage() {
   ]
 
   const endpoints = [
+    
     { path: "/posts", description: "Maqolalar", count: "80 ta", icon: MessageCircle },
     { path: "/comments", description: "Izohlar", count: "80 ta", icon: MessageCircle },
     { path: "/albums", description: "Albomlar", count: "100 ta", icon: MessageCircle },
@@ -62,7 +63,7 @@ export default function HomePage() {
     { path: "/todos", description: "Vazifalar", count: "200 ta", icon: Check },
     { path: "/users", description: "Foydalanuvchilar", count: "10 ta", icon: Users },
   ]
-  
+
   const showToast = useMyToast()
 
   const handleCopy = (path: string, fullUrl: string) => {
