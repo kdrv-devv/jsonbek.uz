@@ -19,6 +19,7 @@ export default function HomePage() {
     {
       id: "comedy",
       name: "Komediya",
+      
       icon: Laugh,
       color: "text-yellow-500",
       bg: "bg-yellow-50",
