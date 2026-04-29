@@ -62,7 +62,7 @@ export default function HomePage() {
     { path: "/todos", description: "Vazifalar", count: "200 ta", icon: Check },
     { path: "/users", description: "Foydalanuvchilar", count: "10 ta", icon: Users },
   ]
-
+  
   const showToast = useMyToast()
 
   const handleCopy = (path: string, fullUrl: string) => {
